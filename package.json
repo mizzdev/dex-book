@@ -1,0 +1,54 @@
+{
+  "name": "dex-book",
+  "version": "0.1.0",
+  "description": "A simplistic Node.js TypeScript order book for trading engines",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "test": "./node_modules/.bin/jest",
+    "build": "./node_modules/.bin/tsc",
+    "dev": "./node_modules/.bin/tsc --watch",
+    "lint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'",
+    "docs": "./node_modules/.bin/typedoc"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "matching",
+    "book"
+  ],
+  "author": "Alexander Rozhok <mizzdev@gmail.com>",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=7.5.0"
+  },
+  "devDependencies": {
+    "@types/big.js": "^4.0.5",
+    "@types/jest": "^24.0.6",
+    "@types/node": "^11.9.5",
+    "@types/uuid": "^3.4.4",
+    "jest": "^24.1.0",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.12.1",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "big.js": "^5.2.2",
+    "sorted-array": "^2.0.2",
+    "uuid": "^3.3.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "^.+\\.spec\\.ts$",
+    "collectCoverage": true
+  }
+}
