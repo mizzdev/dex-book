@@ -46,7 +46,9 @@ This software is not intended to be a public open source solution. If you ever g
 
 > The package is compiled into ES2016, supported by Node.js starting from version 7.5.0
 
-After you have registered this package in your package.json you may simply use:
+> **IMPORTANT**: As this is a proprietary module, it is not published to any npm repository, thus is not build into JavaScript from TypeScript sources. That is why you would generally prefer to receive a build repository branch or an archive with the prebuilt library. Alternatively, you may call ```npm build``` in the module folder before installing from it.
+
+After you have registered the pre-built package in your package.json you may simply use:
 
 ```bash
 $ npm install
@@ -58,9 +60,13 @@ or
 $ npm install dex-book --save
 ```
 
-depending on your package.json configuration and where are you installing this package from.
+or 
 
-The package automatically compiles in JavaScript during installation process.
+```bash
+$ npm install ./lib/dex-book --save
+```
+
+depending on your package.json configuration and where are you installing this package from.
 
 ## Usage<a name="usage"></a>
 
