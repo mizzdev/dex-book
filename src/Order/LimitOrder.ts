@@ -86,6 +86,8 @@ export class LimitOrder extends Order implements ILimitOrder {
   }
 
   public import(context: IBookControlContext) {
+
+    super.import(context);
     this.placeIntoBook(context);
   }
 

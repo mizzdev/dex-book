@@ -27,6 +27,9 @@ export interface IOrder {
   /** If set, no ORDER_ACCEPTED events will be fired for this order */
   readonly shouldSuppressAcceptEvents: boolean;
 
+  /** If set, no ORDER_PLACED events will be fired for this order */
+  readonly shouldSuppressPlaceEvents: boolean;
+
   /** The order metadata. Does not affect the order book operation. Everything can be put here. */
   readonly meta: any;
 

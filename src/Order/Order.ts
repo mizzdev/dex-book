@@ -25,6 +25,7 @@ export abstract class Order implements IOrder {
   get stpfId() { return this._stpfId; }
 
   get shouldSuppressAcceptEvents() { return this._shouldSuppressAcceptEvents; }
+  get shouldSuppressPlaceEvents() { return this._shouldSuppressPlaceEvents; }
 
   get meta() { return this._meta; }
   get orderType() { return this._orderType; }
@@ -65,6 +66,7 @@ export abstract class Order implements IOrder {
   private _stpfId?: string;
 
   private _shouldSuppressAcceptEvents: boolean = false;
+  private _shouldSuppressPlaceEvents: boolean = false;
 
   private _meta: any = {};
 
@@ -137,7 +139,9 @@ export abstract class Order implements IOrder {
   }
 
   public import(context: IBookControlContext): void {
-    // Does nothing by default
+
+    this._shouldSuppressAcceptEvents = true;
+    this._shouldSuppressPlaceEvents = true;
   }
 
   public cancel(context: IBookControlContext, errorCode?: EBookErrorCode): boolean {

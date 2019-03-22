@@ -66,6 +66,8 @@ export abstract class StopOrder extends Order implements IStopOrder {
   }
 
   public import(context: IBookControlContext) {
+
+    super.import(context);
     this.placeIntoBook(context);
   }
 

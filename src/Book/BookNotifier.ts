@@ -9,6 +9,12 @@ export class BookNotifier extends EventEmitter implements IBookNotifier {
     this.emit(EBookEvent.ORDER_CANCELLED, order, reason, ...rest);
   }
   public placeOrder(order: IOrder, ...rest: any[]) {
+
+    if (order.shouldSuppressPlaceEvents) {
+      // Suppress place events for the imported orders
+      return;
+    }
+
     this.emit(EBookEvent.ORDER_PLACED, order, ...rest);
   }
   public displaceOrder(order: IOrder, ...rest: any[]) {
