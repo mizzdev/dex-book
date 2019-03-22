@@ -1,6 +1,6 @@
 {
   "name": "dex-book",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "A simplistic Node.js TypeScript order book for trading engines",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
