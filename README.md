@@ -2,10 +2,6 @@
 
 > A simplistic Node.js TypeScript order book for trading engines
 
-## Disclaimer
-
-This software is not intended to be a public open source solution. If you ever get a copy of this package, most likely you received it as a part of a private commercial solution, so please refrain from publishing it to any public repositories (e.g. GitHub public repository or npm registry) to avoid any potential NDA breaches and/or other copyright/licensing issues.
-
 ## Table of contents
 
 1. [Installation](#installation)
